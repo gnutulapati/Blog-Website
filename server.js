@@ -6,7 +6,7 @@ const methodOverride = require("method-override");
 const app = express();
 
 mongoose.connect(
-  `mongodb+srv://${username}:${password}@cluster0.psuqk.mongodb.net/registrationFormDB`,
+  `mongodb+srv://${username}:${password}@cluster0.psuqk.mongodb.net/blogwebsiteDB`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
