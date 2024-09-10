@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const articleRouter = require("./routes/articles");
 const Article = require("./models/article");
@@ -6,7 +8,7 @@ const methodOverride = require("method-override");
 const app = express();
 
 mongoose.connect(
-  `mongodb+srv://${username}:${password}@cluster0.psuqk.mongodb.net/blogwebsiteDB`,
+  `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.psuqk.mongodb.net/blogwebsiteDB`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
